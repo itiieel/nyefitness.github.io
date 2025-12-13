@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NYE — Entrenamiento Personal Premium</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Montserrat:wght@300;400;600&amp;display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#c8a27d;
+  --bg:#050505;
+  --muted:#bfb7af;
+  --white:#f7f5f3;
+}
+
+*{box-sizing:border-box}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:Montserrat,Arial;
+  background:var(--bg);
+  color:var(--white);
+}
+
+/* HEADER */
+header{
+  position:absolute;
+  top:0;
+  width:100%;
+  z-index:10;
+  display:flex;
+  justify-content:space-between;
+  padding:22px 48px;
+}
+header .logo{
+  font-family:Playfair Display,serif;
+  font-size:22px;
+  color:var(--gold);
+  letter-spacing:1px;
+}
+nav a{
+  color:var(--white);
+  margin-left:26px;
+  text-decoration:none;
+  font-size:13px;
+  letter-spacing:1px;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1600&q=80");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+}
+.hero h1{
+  font-family:Playfair Display,serif;
+  font-size:52px;
+  margin-bottom:22px;
+}
+.hero p{
+  max-width:600px;
+  margin:0 auto 34px;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.8;
+}
+
+.btn{
+  background:var(--gold);
+  color:#000;
+  border:none;
+  padding:14px 34px;
+  font-size:14px;
+  letter-spacing:1px;
+  border-radius:4px;
+  cursor:pointer;
+  text-decoration:none;
+  display:inline-block;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(200,162,125,.25);
+}
+
+/* SECTIONS */
+section{
+  padding:90px 20px;
+  text-align:center;
+}
+section h2{
+  font-family:Playfair Display,serif;
+  color:var(--gold);
+  margin-bottom:26px;
+  font-size:32px;
+}
+.section-text{
+  max-width:680px;
+  margin:0 auto 60px;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.9;
+}
+
+/* FEATURES */
+.features-premium{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:80px;
+  max-width:1000px;
+  margin:0 auto;
+}
+.feature-item{text-align:center}
+.check-icon{
+  width:44px;
+  height:44px;
+  border:1px solid var(--gold);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 22px;
+  font-size:18px;
+  color:var(--gold);
+}
+
+/* PACKS */
+.packs{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+  max-width:1000px;
+  margin:0 auto;
+}
+.pack{
+  border:1px solid rgba(255,255,255,.1);
+  padding:50px 30px;
+  transition:transform .35s ease;
+}
+.pack:hover{
+  transform:translateY(-6px);
+}
+.pack.featured{
+  border:2px solid var(--gold);
+}
+.pack h3{
+  color:var(--gold);
+  font-size:18px;
+  letter-spacing:2px;
+}
+.price{
+  font-size:40px;
+  margin:26px 0;
+  color:var(--gold);
+}
+.pack ul{
+  list-style:none;
+  padding:0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* REVEAL ANIMATIONS */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:opacity .9s ease, transform .9s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+.pack.reveal{
+  transition-delay:.15s;
+}
+.pack.featured.reveal{
+  transition-delay:.3s;
+}
+
+/* ===== FIX DEFINITIVO VISUAL MOVIL ===== */
+@media(max-width:768px){
+  .reveal{
+    opacity:1 !important;
+    transform:none !important;
+  }
+}
+
+/* FOOTER */
+footer{
+  padding:40px;
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .features-premium,
+  .packs{grid-template-columns:1fr}
+  .hero h1{font-size:38px}
+}
+</style>
+
+<script>
+/* vacío a propósito */
+</script>
+<style type="text/css">
+.grande { font-size: 60px; }
+</style>
+<script>
+// Escribir aqui el código Javascript
+</script>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">NYE</div>
+  <nav>
+    <a href="#planes">PLANES</a>
+    <a href="#contacto">REGALO</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Entrenamiento Personal<br>Premium</h1>
+    <p>Planes personalizados para casa, gym o exterior.</p>
+    <a href="#planes" class="btn">SOLICITA AHORA TU PLAN</a>
+  </div>
+</section>
+
+<section id="como" class="reveal">
+  <h2>¿Para quién es NYE FITNESS?</h2>
+  <p class="section-text">
+    Ayudamos a bajar de peso, tonificar o ganar masa muscular con programas adaptados a tu nivel y objetivos.
+  </p>
+
+  <div class="features-premium">
+    <div class="feature-item">
+      <div class="check-icon">✓</div>
+      <h3>100% personalizado</h3>
+      <p>Entrenamiento diseñado exclusivamente para ti.</p>
+    </div>
+    <div class="feature-item">
+      <div class="check-icon">✓</div>
+      <h3>Seguimiento quincenal</h3>
+      <p>Revisión cada dos semanas.</p>
+    </div>
+    <div class="feature-item">
+      <div class="check-icon">✓</div>
+      <h3>Entrena donde quieras</h3>
+      <p>Casa, gimnasio o exterior.</p>
+    </div>
+  </div>
+</section>
+
+<section id="planes" class="reveal">
+  <h2>Packs de entrenamiento</h2>
+
+  <div class="packs">
+    <div class="pack reveal">
+      <h3>1 MES</h3>
+      <div class="price">49€</div>
+      <ul><li>Perfecto para empezar</li></ul>
+      <a href="https://wa.me/34610468089?text=Hola%20NYE,%20me%20interesa%20el%20pack%20de%201%20mes" class="btn" target="_blank">Elegir pack</a>
+    </div>
+
+    <div class="pack featured reveal">
+      <h3>2 MESES</h3>
+      <div class="price">89€</div>
+      <ul><li>El más vendido</li></ul>
+      <a href="https://wa.me/34610468089?text=Hola%20NYE,%20me%20interesa%20el%20pack%20de%202%20meses" class="btn" target="_blank">Elegir pack</a>
+    </div>
+
+    <div class="pack reveal">
+      <h3>3 MESES</h3>
+      <div class="price">125€</div>
+      <ul><li>Mejor opción</li></ul>
+      <a href="https://wa.me/34610468089?text=Hola%20NYE,%20me%20interesa%20el%20pack%20de%203%20meses" class="btn" target="_blank">Elegir pack</a>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="reveal">
+  <h2>Bonus de bienvenida</h2>
+  <p class="section-text">Empieza tu proceso con ventaja.</p>
+  <a href="https://wa.me/34610468089?text=Hola%20NYE,%20quiero%20el%20bonus%20de%20bienvenida" class="btn" target="_blank">
+    Regalo
+  </a>
+</section>
+
+<footer>
+  © NYE Entrenamiento Personal Premium
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('active');
+    }
+  });
+},{threshold:0.15});
+reveals.forEach(el=>observer.observe(el));
+</script>
+
+
+
+
+</body></html>
